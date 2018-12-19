@@ -1,8 +1,8 @@
 {
-    "name": "iview",
-    "version": "3.2.0",
+    "name": "iviewqht",
+    "version": "3.2.01",
     "title": "iView",
-    "description": "A high quality UI components Library with Vue.js",
+    "description": "定制版",
     "homepage": "http://www.iviewui.com",
     "keywords": [
         "iview",
@@ -35,7 +35,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/iview/iview"
+        "url": "https://github.com/xingzhefeng/iview"
     },
     "author": "Aresn",
     "license": "MIT",

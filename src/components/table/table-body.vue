@@ -7,7 +7,6 @@
             <template v-for="(row, index) in data">
                 <table-tr
                     :row="row"
-                    :key="row._rowKey"
                     :prefix-cls="prefixCls"
                     @mouseenter.native.stop="handleMouseIn(row._index)"
                     @mouseleave.native.stop="handleMouseOut(row._index)"
@@ -18,7 +17,6 @@
                             :fixed="fixed"
                             :prefix-cls="prefixCls"
                             :row="row"
-                            :key="column._columnKey"
                             :column="column"
                             :natural-index="index"
                             :index="row._index"
@@ -30,7 +28,7 @@
                 </table-tr>
                 <tr v-if="rowExpanded(row._index)" :class="{[prefixCls + '-expanded-hidden']: fixed}">
                     <td :colspan="columns.length" :class="prefixCls + '-expanded-cell'">
-                        <Expand :key="row._rowKey" :row="row" :render="expandRender" :index="row._index"></Expand>
+                        <Expand  :row="row" :render="expandRender" :index="row._index"></Expand>
                     </td>
                 </tr>
             </template>
@@ -43,7 +41,7 @@
     import TableCell from './cell.vue';
     import Expand from './expand.js';
     import Mixin from './mixin';
-
+    console.log("定制版2")
     export default {
         name: 'TableBody',
         mixins: [ Mixin ],
